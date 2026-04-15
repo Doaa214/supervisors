@@ -37,23 +37,6 @@ function AddSupervisor({ isOpen, onClose, supervisorToEdit }: AddSupervisorProps
 
   const [formData, setFormData] = useState(initialFormData);
 
-  useEffect(() => {
-    if (!isOpen) return;
-
-    if (supervisorToEdit) {
-      setFormData({
-        name: supervisorToEdit.name || "",
-        email: supervisorToEdit.email || "",
-        phone: supervisorToEdit.phone || "",
-        phoneCode: supervisorToEdit.phoneCode || "20",
-        password: "",
-        confirmPassword: "",
-        isActive: supervisorToEdit.status === 'ACTIVE',
-      });
-    } else {
-      setFormData(initialFormData);
-    }
-  }, [isOpen, supervisorToEdit]);
 
   const handleSubmit = async () => {
     
