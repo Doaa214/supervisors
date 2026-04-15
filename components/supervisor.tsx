@@ -105,11 +105,11 @@ function Supervisor() {
                     <td className="p-4 text-gray-600 text-sm text-center">{item.phone || "---"}</td>
                     <td className="p-4 text-center">
                       <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase ${
-                        (item.isActive === true || item.isActive === 1) 
+                        (item.status === true || item.status === 1) 
                         ? 'bg-green-100 text-green-700' 
                         : 'bg-red-100 text-red-700'
                       }`}>
-                        {(item.isActive === true || item.isActive === 1) ? "Active" : "Inactive"}
+                        {(item.status === true || item.status === 1) ? "Active" : "Inactive"}
                       </span>
                     </td>
                     <td className="p-4 text-gray-500 text-sm">{new Date().toLocaleDateString()}</td>
