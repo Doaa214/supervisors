@@ -10,11 +10,11 @@ function Supervisor() {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   
-  // States للتحكم في الـ Drawer
+  
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedSupervisor, setSelectedSupervisor] = useState<SupervisorType | null>(null);
 
-  // (دالة فتح التعديل)
+  
   const handleEditClick = (supervisor: SupervisorType) => {
     setSelectedSupervisor(supervisor);
     setIsDrawerOpen(true);
